@@ -2,7 +2,7 @@ import ExpenseDate from "./ExpenseDate";
 import Card from "../UI/Card";
 import "./ExpenseItem.css";
 
-interface ExpenseItemProps {
+export interface ExpenseItemProps {
   date: Date;
   title: string;
   amount: number;

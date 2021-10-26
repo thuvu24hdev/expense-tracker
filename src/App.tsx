@@ -1,4 +1,5 @@
 import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 export interface Expense {
   id: string;
@@ -29,10 +30,12 @@ const App = () => {
       date: new Date(2021, 5, 12),
     },
   ];
-
+  const addExpenseHandler = (expense: Expense) => {
+    console.log(expense);
+  };
   return (
     <div>
-      <h2>Expense Tracker</h2>
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
   );
